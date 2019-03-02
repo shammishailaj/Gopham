@@ -24,9 +24,9 @@ step 5: Go to localhost:5000 . Type in a name and the name of the folder that yo
 
 ## Pictures
 
-[Creating a new analysis](images/newana.PNG)
+![Creating a new analysis](images/newana.PNG)
 
-[Details page](images/metrics.PNG)
+![Details page](images/metrics.PNG)
 
 ## Metrics
 
