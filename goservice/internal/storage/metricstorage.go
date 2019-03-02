@@ -3,7 +3,7 @@ package storage
 import (
 	"go/ast"
 
-	"github.com/SerdaOzun/gopham/internal/utils"
+	"github.com/SerdaOzun/Gopham/internal/utils"
 )
 
 type MetricBank struct {

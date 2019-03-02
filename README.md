@@ -1,6 +1,6 @@
 # Gopham - Static Code Analysis Tool for Go
 
-Gopham is the worlds first static code analysis tool providing a range of various metrics
+Gopham is the worlds first static code analysis tool for Go providing a range of various metrics
 
 ## Installation
 
@@ -8,7 +8,7 @@ Step 1: Install Docker
 
 Step 2: Clone this Repository and ```cd``` there
 
-Step 3: Create /projects/ and copy the project you wish to analyze under it
+Step 3: Copy the project you wish to analyze under /projects/
 
 Your directory should look like this:
 ```
@@ -21,6 +21,12 @@ step 4: Run docker via ```docker-compose up --build```
 
 step 5: Go to localhost:5000 . Type in a name and the name of the folder that you placed in /projects/. 
 "myProject" in this case
+
+## Pictures
+
+[Creating a new analysis](images/newana.PNG)
+
+[Details page](images/metrics.PNG)
 
 ## Metrics
 

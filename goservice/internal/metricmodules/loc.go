@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/SerdaOzun/gopham/internal/storage"
+	"github.com/SerdaOzun/Gopham/internal/storage"
 )
 
 // Credit for algorithm goes to: https://gist.github.com/shiva27/1432290

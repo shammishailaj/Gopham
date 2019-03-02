@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/SerdaOzun/gopham/internal/storage"
-	"github.com/SerdaOzun/gopham/internal/utils"
+	"github.com/SerdaOzun/Gopham/internal/storage"
+	"github.com/SerdaOzun/Gopham/internal/utils"
 )
 
 func ComputeDependencies(root string) {

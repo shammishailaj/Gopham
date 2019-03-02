@@ -6,8 +6,8 @@ import (
 
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"github.com/SerdaOzun/gopham/internal/metricmodules"
-	"github.com/SerdaOzun/gopham/internal/storage"
+	"github.com/SerdaOzun/Gopham/internal/metricmodules"
+	"github.com/SerdaOzun/Gopham/internal/storage"
 )
 
 func main() {

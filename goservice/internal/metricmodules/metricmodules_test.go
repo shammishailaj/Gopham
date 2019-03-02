@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/SerdaOzun/gopham/internal/storage"
+	"github.com/SerdaOzun/Gopham/internal/storage"
 )
 
 func TestMain(m *testing.M) {

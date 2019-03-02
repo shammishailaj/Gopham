@@ -1,4 +1,4 @@
-module github.com/serdaozun/gopham
+module github.com/SerdaOzun/Gopham
 
 require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible // indirect
@@ -8,5 +8,6 @@ require (
 	github.com/mattn/go-isatty v0.0.6 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v0.0.0-20170224212429-dcecefd839c4 // indirect
+	go.etcd.io/bbolt v1.3.2
 	golang.org/x/crypto v0.0.0-20190228161510-8dd112bcdc25 // indirect
 )
