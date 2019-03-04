@@ -1,23 +1,31 @@
 <template>
-<div style="margin: 0 auto">
-  <v-btn class="mybuttons" to="/analysis" large color="green">New Analysis</v-btn>
-  <v-btn class="mybuttons" large color="primary" @click="retrieveProjectList">Refresh</v-btn>
-  <div style="margin-bottom: 5%"></div>
+  <div style="margin: 0 auto">
+    <v-btn class="mybuttons" to="/analysis" large color="green"
+      >New Analysis</v-btn
+    >
+    <v-btn class="mybuttons" large color="primary" @click="retrieveProjectList"
+      >Refresh</v-btn
+    >
+    <div style="margin-bottom: 5%"></div>
 
-  <v-card style="width: 100%;" v-for="(value, key) in projects" v-bind:key="key">
-    <v-card-title class="description" primary-title>
-      <div style="display: inline-block;">
-        <h2 style="width: 400px;" class="headline mb-0">{{key}}</h2>
-        <h4>{{value}}</h4>
-      </div>
-    </v-card-title>
+    <v-card
+      style="width: 100%;"
+      v-for="(value, key) in projects"
+      v-bind:key="key"
+    >
+      <v-card-title class="description" primary-title>
+        <div style="display: inline-block;">
+          <h2 style="width: 400px;" class="headline mb-0">{{ key }}</h2>
+          <h4>{{ value }}</h4>
+        </div>
+      </v-card-title>
 
-    <v-card-actions class="cardbuttons">
-      <v-btn flat color="blue" @click="showDetails(key)">Details</v-btn>
-      <v-btn flat color="red" @click="deleteProject(key)">Delete</v-btn>
+      <v-card-actions class="cardbuttons">
+        <v-btn flat color="blue" @click="showDetails(key)">Details</v-btn>
+        <v-btn flat color="red" @click="deleteProject(key)">Delete</v-btn>
       </v-card-actions>
     </v-card>
-</div>
+  </div>
 </template>
 
 <script>

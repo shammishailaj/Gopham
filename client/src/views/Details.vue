@@ -1,80 +1,65 @@
 <template>
-<div >
-  <!-- Left half of screen with navigation and additional Info -->
-  <div style="margin-top:4vw; margin-left: 1vw" class="split left">
+  <div>
+    <!-- Left half of screen with navigation and additional Info -->
+    <div style="margin-top:4vw; margin-left: 1vw" class="split left">
       <v-navigation-drawer permanent>
-    <v-toolbar flat>
-      <v-list >
-          <v-list-tile-title class="title">
-            {{pid}}
-            <br>
-          </v-list-tile-title>
-      </v-list>
-    </v-toolbar>
-    <p>
+        <v-toolbar flat>
+          <v-list>
+            <v-list-tile-title class="title">
+              {{ pid }}
+              <br />
+            </v-list-tile-title>
+          </v-list>
+        </v-toolbar>
+        <p>SLoC: {{ totalLoC }}</p>
+        <v-divider></v-divider>
 
-            SLoC:  {{totalLoC}}
-
-    </p>
-    <v-divider></v-divider>
-
-    <v-list
-      dense
-      class="pt-0"
-    >
-      <v-list-tile
-        v-for="(value, key) in metrics"
-        :key="key"
-        @click="showmetric(key)"
-      >
-        <v-list-tile-content>
-          <v-list-tile-title>{{ value.title }}</v-list-tile-title>
-        </v-list-tile-content>
-      </v-list-tile>
-    </v-list>
-  </v-navigation-drawer>
+        <v-list dense class="pt-0">
+          <v-list-tile
+            v-for="(value, key) in metrics"
+            :key="key"
+            @click="showmetric(key)"
+          >
+            <v-list-tile-content>
+              <v-list-tile-title>{{ value.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
+      </v-navigation-drawer>
+    </div>
+    <!-- Right Half of Screen with Content -->
+    <div style="margin-top:4vw" class="split right">
+      <v-card style="margin-bottom: 5vw">
+        <v-card-title>
+          {{ tabletitle }}
+          <v-spacer></v-spacer>
+          <v-text-field
+            v-model="search"
+            append-icon="search"
+            label="Search"
+            single-line
+            hide-details
+          ></v-text-field>
+        </v-card-title>
+        <v-data-table
+          :headers="headers"
+          :items="tablevalues"
+          :search="search"
+          :rows-per-page-items="[50, 100, 200]"
+        >
+          <template slot="items" slot-scope="props">
+            <td>{{ props.item.keyname }}</td>
+            <td class="text-xs-right">
+              {{ props.item.count }}
+            </td>
+          </template>
+          <v-alert slot="no-results" :value="true" color="error" icon="warning">
+            Your search for "{{ search }}" found no results.
+          </v-alert>
+        </v-data-table>
+      </v-card>
+    </div>
   </div>
-  <!-- Right Half of Screen with Content -->
-  <div style="margin-top:4vw" class="split right">
-  <v-card style="margin-bottom: 5vw">
-    <v-card-title>
-      {{tabletitle}}
-      <v-spacer></v-spacer>
-      <v-text-field
-        v-model="search"
-        append-icon="search"
-        label="Search"
-        single-line
-        hide-details
-      ></v-text-field>
-    </v-card-title>
-    <v-data-table
-      :headers="headers"
-      :items="tablevalues"
-      :search="search"
-      :rows-per-page-items="[50, 100, 200]"
-    >
-      <template
-        slot="items"
-        slot-scope="props"
-      >
-        <td>{{ props.item.keyname }}</td>
-        <td class="text-xs-right">
-          {{ props.item.count }}
-        </td>
-      </template>
-      <v-alert
-        slot="no-results"
-        :value="true"
-        color="error"
-        icon="warning"
-      >
-        Your search for "{{ search }}" found no results.
-      </v-alert>
-    </v-data-table>
-  </v-card>
-  </div>
-</div>
 </template>
 
 <script>

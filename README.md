@@ -55,5 +55,16 @@ ___
 Metrics planned for the future: Complexity (for functions, files and packages) and SLoC for functions,
 as well as various visualizations
 
+## Changelog
+
+**1.0 - (02.03.2019)**
+
++ Initial Relase
+
+**1.0.1 - (04.03.2019)**
+
++ added loading screen and error messages for convenience
+
+
 ## License
 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
