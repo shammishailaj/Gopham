@@ -1,6 +1,6 @@
 # Gopham - Static Code Analysis Tool for Go
 
-Gopham is the worlds first static code analysis tool for Go providing a range of various metrics
+Gopham is a tool to compute software related Metrics for the Go programming language
 
 ## Installation
 
